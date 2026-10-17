@@ -13,7 +13,7 @@ import 'package:evently_c20_dokki/ui/widgets/custom_tab_bar_widget.dart';
 import 'package:evently_c20_dokki/ui/widgets/event_card.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:icons_plus/icons_plus.dart';
+import 'package:iconsx_plus/iconsx_plus.dart';
 import 'package:provider/provider.dart';
 
 class HomeTab extends StatefulWidget {
@@ -54,23 +54,27 @@ class _HomeTabState extends State<HomeTab> {
           ),
           Expanded(
             child: StreamBuilder<QuerySnapshot<Event>>(
-              stream: FirebaseDatabase().getEventsStream(category: selectedIndex == 0 ? null : allCategories[selectedIndex].id),
+              stream: FirebaseDatabase().getEventsStream(
+                category: selectedIndex == 0
+                    ? null
+                    : allCategories[selectedIndex].id,
+              ),
               builder: (context, snapshot) {
                 if (snapshot.connectionState == .waiting) {
                   return const Center(child: CircularProgressIndicator());
                 } else if (snapshot.hasError) {
                   return Center(child: Text(snapshot.error.toString()));
                 } else if (snapshot.hasData) {
-                  var events = snapshot.data?.docs.map((e)=> e.data()).toList() ?? [];
-                  events.sort(
-                    (a, b) => b.date!.compareTo(a.date!)
-                  );
+                  var events =
+                      snapshot.data?.docs.map((e) => e.data()).toList() ?? [];
+                  events.sort((a, b) => b.date!.compareTo(a.date!));
                   if (events.isEmpty) {
                     return const Center(child: Text("No Events Found"));
                   } else {
                     return ListView.separated(
                       padding: EdgeInsets.all(16),
-                      itemBuilder: (_, index) => EventCard(event: events[index],),
+                      itemBuilder: (_, index) =>
+                          EventCard(event: events[index]),
                       separatorBuilder: (_, _) => 16.verticalSpace,
                       itemCount: events.length,
                     );

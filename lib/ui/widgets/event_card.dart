@@ -7,7 +7,7 @@ import 'package:evently_c20_dokki/firebase/firebase_database.dart';
 import 'package:evently_c20_dokki/models/event.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:icons_plus/icons_plus.dart';
+import 'package:iconsx_plus/iconsx_plus.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 
@@ -71,9 +71,9 @@ class EventCard extends StatelessWidget {
                   IconButton(
                     onPressed: () {
                       var uid = FirebaseAuth.instance.currentUser?.uid ?? "";
-                      if(event.likes.contains(uid)){
+                      if (event.likes.contains(uid)) {
                         event.likes.remove(uid);
-                      }else{
+                      } else {
                         event.likes.add(uid);
                       }
                       FirebaseDatabase().updateEvent(event);

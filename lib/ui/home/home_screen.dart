@@ -3,9 +3,12 @@ import 'package:evently_c20_dokki/core/utils/icons_extension.dart';
 import 'package:evently_c20_dokki/ui/event_managment/event_managment_screen.dart';
 import 'package:evently_c20_dokki/ui/home/tabs/favorite_tab.dart';
 import 'package:evently_c20_dokki/ui/home/tabs/home_tab.dart';
+import 'package:evently_c20_dokki/ui/home/tabs/maps_tab/provider/map_tab_provider.dart';
+import 'package:evently_c20_dokki/ui/home/tabs/maps_tab/screen/map_tab.dart';
 import 'package:evently_c20_dokki/ui/home/tabs/profile_tab.dart';
 import 'package:flutter/material.dart';
-import 'package:icons_plus/icons_plus.dart';
+import 'package:iconsx_plus/iconsx_plus.dart';
+import 'package:provider/provider.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String routeName = "/home";
@@ -21,6 +24,10 @@ class _HomeScreenState extends State<HomeScreen> {
 
   List<Widget> tabs = [
     HomeTab(),
+    ChangeNotifierProvider(
+      create: (context) => MapTabProvider(),
+      child: MapTab(),
+    ),
     FavoriteTab(),
     ProfileTab(),
   ];
@@ -47,6 +54,11 @@ class _HomeScreenState extends State<HomeScreen> {
             icon: Iconsax.home_outline.toIcon,
             activeIcon: Iconsax.home_bold.toIcon,
             label: context.locale.home,
+          ),
+          BottomNavigationBarItem(
+            icon: Iconsax.location_outline.toIcon,
+            activeIcon: Iconsax.location_bold.toIcon,
+            label: 'Maps',
           ),
           BottomNavigationBarItem(
             icon: Iconsax.heart_outline.toIcon,

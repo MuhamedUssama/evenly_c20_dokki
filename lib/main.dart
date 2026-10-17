@@ -7,7 +7,6 @@ import 'package:evently_c20_dokki/ui/login/login_screen.dart';
 import 'package:evently_c20_dokki/ui/setup/setup_screen.dart';
 import 'package:evently_c20_dokki/ui/signup/signup_screen.dart';
 import 'package:evently_c20_dokki/ui/splash/splash_screen.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';

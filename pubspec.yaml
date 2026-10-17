@@ -39,10 +39,12 @@ dependencies:
     sdk: flutter
   intl: any
   shared_preferences:
-  icons_plus:
+  iconsx_plus:
   firebase_core: ^4.15.0
   firebase_auth: ^6.7.0
   cloud_firestore: ^6.10.0
+  location: ^10.0.2
+  google_maps_flutter: ^2.19.0
 
 dev_dependencies:
   flutter_test:

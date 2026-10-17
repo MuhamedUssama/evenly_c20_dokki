@@ -4,7 +4,7 @@ import 'package:evently_c20_dokki/core/utils/validators.dart';
 import 'package:evently_c20_dokki/firebase/auth_service.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:icons_plus/icons_plus.dart';
+import 'package:iconsx_plus/iconsx_plus.dart';
 import 'package:provider/provider.dart';
 
 class SignupScreen extends StatefulWidget {
@@ -112,11 +112,12 @@ class _SignupScreenState extends State<SignupScreen> {
                         setState(() {
                           isLoading = true;
                         });
-                        var user = await authService.createAccountWithEmailAndPassword(
-                          emailController.text,
-                          passwordController.text,
-                          nameController.text,
-                        );
+                        var user = await authService
+                            .createAccountWithEmailAndPassword(
+                              emailController.text,
+                              passwordController.text,
+                              nameController.text,
+                            );
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(
                             content: Text(

@@ -9,7 +9,7 @@ import 'package:evently_c20_dokki/models/event.dart';
 import 'package:evently_c20_dokki/ui/widgets/event_card.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:icons_plus/icons_plus.dart';
+import 'package:iconsx_plus/iconsx_plus.dart';
 
 class FavoriteTab extends StatefulWidget {
   const FavoriteTab({super.key});
@@ -25,9 +25,7 @@ class _FavoriteTabState extends State<FavoriteTab> {
   void initState() {
     super.initState();
     controller.addListener(() {
-      setState(() {
-
-      });
+      setState(() {});
     });
   }
 

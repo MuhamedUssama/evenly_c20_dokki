@@ -9,7 +9,7 @@ import 'package:evently_c20_dokki/ui/home/home_screen.dart';
 import 'package:evently_c20_dokki/ui/signup/signup_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:icons_plus/icons_plus.dart';
+import 'package:iconsx_plus/iconsx_plus.dart';
 import 'package:provider/provider.dart';
 
 class LoginScreen extends StatefulWidget {

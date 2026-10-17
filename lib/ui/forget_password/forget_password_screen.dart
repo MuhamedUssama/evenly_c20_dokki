@@ -1,7 +1,7 @@
 import 'package:evently_c20_dokki/core/config/app_config.dart';
 import 'package:evently_c20_dokki/core/l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
-import 'package:icons_plus/icons_plus.dart';
+import 'package:iconsx_plus/iconsx_plus.dart';
 import 'package:provider/provider.dart';
 
 class ForgetPasswordScreen extends StatelessWidget {

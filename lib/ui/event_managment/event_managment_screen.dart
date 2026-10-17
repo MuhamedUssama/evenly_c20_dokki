@@ -11,7 +11,7 @@ import 'package:evently_c20_dokki/models/event.dart';
 import 'package:evently_c20_dokki/ui/widgets/custom_tab_bar_widget.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:icons_plus/icons_plus.dart';
+import 'package:iconsx_plus/iconsx_plus.dart';
 import 'package:intl/intl.dart';
 
 class EventManagementScreen extends StatefulWidget {
@@ -81,7 +81,7 @@ class _EventManagementScreenState extends State<EventManagementScreen> {
                 description: descriptionController.text,
                 date: date!,
                 timeOfDay: time!,
-                category: categories[selectedIndex].id
+                category: categories[selectedIndex].id,
               );
 
               await FirebaseDatabase().addEvent(event);

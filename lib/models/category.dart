@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:icons_plus/icons_plus.dart';
+import 'package:iconsx_plus/iconsx_plus.dart';
 
 class Category {
   String nameEn;
@@ -11,15 +11,8 @@ class Category {
   Category(this.nameEn, this.nameAr, this.image, this.id, this.icon);
 }
 
-
 List<Category> categoriesList = [
-  Category(
-    "Sport",
-    "رياضة",
-    "Sport",
-    'sport',
-    Iconsax.cup_bold,
-  ),
+  Category("Sport", "رياضة", "Sport", 'sport', Iconsax.cup_bold),
   Category(
     "Book Club",
     "نادي الكتاب",
@@ -27,19 +20,14 @@ List<Category> categoriesList = [
     'book_club',
     Iconsax.book_bold,
   ),
-  Category(
-    "Birthday",
-    "عيد ميلاد",
-    "Birthday",
-    'birthday',
-    Iconsax.cake_bold,
-  ),
+  Category("Birthday", "عيد ميلاد", "Birthday", 'birthday', Iconsax.cake_bold),
   Category(
     "Meeting",
     "اجتماع",
     "Meeting",
     'meeting',
-    Iconsax.people_bold, // Or Iconsax.briefcase_bold / Iconsax.profile_2user_bold
+    Iconsax
+        .people_bold, // Or Iconsax.briefcase_bold / Iconsax.profile_2user_bold
   ),
   Category(
     "Exhibition",
@@ -53,5 +41,3 @@ List<Category> categoriesList = [
 final Map<String, Category> categoriesMap = {
   for (final category in categoriesList) category.id: category,
 };
-
-
